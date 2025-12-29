@@ -77,6 +77,24 @@ python train_1.py --dataset CIFAR10 --model LeNet --total-client 100 --comm-roun
 ```bash
 python train_1.py \
     --dataset CIFAR10 \
+    --model LeNet \
+    --non-iid \
+    --split-rule Dirichlet \
+    --split-coef 0.3 \
+    --total-client 100 \
+    --active-ratio 0.1 \
+    --comm-rounds 500 \
+    --local-epochs 5 \
+    --batchsize 128 \
+    --local-learning-rate 0.1 \
+    --seed 20 \
+    --cuda 0
+```
+
+#### CIFAR-100 Experiment (Heterogeneous Data Dirichlet)
+```bash
+python train_1.py \
+    --dataset CIFAR100 \
     --model ResNet18 \
     --non-iid \
     --split-rule Dirichlet \
@@ -91,14 +109,22 @@ python train_1.py \
     --cuda 0
 ```
 
-#### MNIST Experiment (IID Data)
+#### CIFAR-100 Experiment (Heterogeneous Data pathological)
 ```bash
 python train_1.py \
-    --dataset mnist \
-    --model LeNet \
+    --dataset tinyimagenet \
+    --model ResNet18_tinyimagenet \
+    --non-iid \
+    --split-rule Path \
+    --split-coef 20 \
     --total-client 100 \
-    --comm-rounds 200 \
-    --seed 42
+    --active-ratio 0.1 \
+    --comm-rounds 500 \
+    --local-epochs 5 \
+    --batchsize 128 \
+    --local-learning-rate 0.1 \
+    --seed 20 \
+    --cuda 0
 ```
 
 ## Project Structure
@@ -186,4 +212,9 @@ If you use this project in your research, please cite:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Thanks
+
+This repository is modified based on https://github.com/woodenchild95/FL-Simulator.
+
 

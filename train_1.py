@@ -46,7 +46,7 @@ def set_global_seed(seed: int):
 
 
 parser = argparse.ArgumentParser()
-# parser.add_argument('--mode', choices=['all', 'star','single','meshgrid','exponential'], type=str, default='all')
+
 parser.add_argument('--dataset', choices=['CIFAR10', 'CIFAR100','mnist','tinyimagenet'], type=str, default='CIFAR10')             # select dataset
 parser.add_argument('--model', choices=['ResNet18', 'ResNet18_tinyimagenet','LeNet'], type=str, default='LeNet')                    # select model
 parser.add_argument('--non-iid', action='store_true', default=True)                                       # activate if use heterogeneous dataset
