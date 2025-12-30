@@ -1,4 +1,5 @@
-# DFedCata: Federated Learning Framework
+
+# DFedCata: Boosting the Performance of Decentralized Federated Learning via Catalyst Acceleration
 
 [![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.9+-red.svg)](https://pytorch.org/)
